@@ -5,25 +5,81 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card>
+  <ion-card *ngFor='let pedido of pedidos'>
     <ion-card-header>
       <ion-grid>
         <ion-row>
           <ion-col>
-            <ion-card-title>001 - Ricardo </ion-card-title>
+            <ion-card-title>{{pedido.numero}} {{pedido.cliente.nome}}</ion-card-title>
           </ion-col>
-          <ion-col text-right>
-            <ion-icon name="cash" style="font-size: 20pt" color="danger"></ion-icon>
-            <ion-badge>5m</ion-badge>
+          <ion-col text-right size="2">
+            <ion-icon name="cash" color="{{pedido.pago ? 'secondary' : 'danger'}}" style="font-size: 20pt;margin-top:-5px"></ion-icon>
+          </ion-col>
+          <ion-col text-right size="2">
+            <ion-badge>{{pedido.tempoGastoEmMinutos}}m</ion-badge>
           </ion-col>
         </ion-row>
       </ion-grid>
     </ion-card-header>
     <ion-card-content>
-      <p>1 Sanduíche / Hamburguer / Molho de ervas / Pão brioche / Sem cebola - R$ 15,00</p>
-      <p>1 Sanduíche / Hamburguer / Molho de ervas / Pão brioche / Sem cebola - R$ 15,00</p>
-      <p>1 Sanduíche / Hamburguer / Molho de ervas / Pão brioche / Sem cebola - R$ 15,00</p>
-      <h2 text-right>Total: R$ 45,00</h2>
+      <ion-row>
+        <ion-col>1 Sanduíche
+          <ion-row>
+            <ion-col size="2"></ion-col>
+            <ion-col>Brioche</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="2"></ion-col>
+            <ion-col>Sem cebola</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="2"></ion-col>
+            <ion-col>Ao ponto</ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col text-right size="4">R$ 15,00</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>1 Sanduíche
+          <ion-row>
+            <ion-col size="2"></ion-col>
+            <ion-col>Parmesão</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="2"></ion-col>
+            <ion-col>Completo</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="2"></ion-col>
+            <ion-col>Bem passado</ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col text-right size="4">R$ 15,00</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>1 Sanduíche
+          <ion-row>
+            <ion-col size="2"></ion-col>
+            <ion-col>Francês</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="2"></ion-col>
+            <ion-col>Completo</ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col size="2"></ion-col>
+              <ion-col>Ao ponto</ion-col>
+            </ion-row>
+        </ion-col>
+        <ion-col text-right size="4">R$ 15,00</ion-col>
+      </ion-row>
+      
+      <p></p>
+      <ion-row>
+          <ion-col>P/ levar</ion-col>
+          <ion-col><h2 text-right>Total: R$ 45,00</h2></ion-col>
+      </ion-row>     
+      
     </ion-card-content>
   </ion-card>
 </ion-content>
