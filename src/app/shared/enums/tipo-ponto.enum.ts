@@ -1,5 +1,5 @@
 export enum TipoPonto {
-    MalPassado = 1,
-    AoPonto = 2,
-    BemPassado = 3,
+    MalPassado = 'Mal Passado',
+    AoPonto = 'Ao Ponto',
+    BemPassado = 'Bem Passado',
 }

@@ -1,5 +1,5 @@
 export enum TipoConsumo {
-    Entrega = 1,
-    ParaLevar = 2,
-    NoLocal = 3,
+    Entrega = 'Entrega',
+    ParaLevar = 'Para Levar',
+    NoLocal = 'No Local',
 }

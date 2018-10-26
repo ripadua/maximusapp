@@ -27,6 +27,7 @@ export class PedidoService {
     pedido1.pago = false;
     pedido1.tipoConsumo = TipoConsumo.ParaLevar;
     pedido1.situacao = SituacaoPedido.Criado;
+    pedido1.valorTotal = 45;
 
     let cliente1 = new Cliente();
     cliente1.id = 1;
@@ -119,23 +120,23 @@ export class PedidoService {
     pedidoProduto1.ingredientes = [produtoIngredientePaoBrioche];
 
     let pedidoProduto2 = new PedidoProduto();
-    pedidoProduto1.id = 2;
-    pedidoProduto1.pedido = pedido1;
-    pedidoProduto1.produto = produtoSanduiche;
-    pedidoProduto1.quantidade = 1;
-    pedidoProduto1.tipoPonto = TipoPonto.BemPassado;
-    pedidoProduto1.ingredientes = [produtoIngredientePaoParmesao, produtoIngredienteCebola];
+    pedidoProduto2.id = 2;
+    pedidoProduto2.pedido = pedido1;
+    pedidoProduto2.produto = produtoSanduiche;
+    pedidoProduto2.quantidade = 1;
+    pedidoProduto2.tipoPonto = TipoPonto.BemPassado;
+    pedidoProduto2.ingredientes = [produtoIngredientePaoParmesao, produtoIngredienteCebola];
 
     let pedidoProduto3 = new PedidoProduto();
-    pedidoProduto1.id = 3;
-    pedidoProduto1.pedido = pedido1;
-    pedidoProduto1.produto = produtoSanduiche;
-    pedidoProduto1.quantidade = 1;
-    pedidoProduto1.tipoPonto = TipoPonto.AoPonto;
-    pedidoProduto1.ingredientes = [produtoIngredientePaoFrances, produtoIngredienteCebola];
+    pedidoProduto3.id = 3;
+    pedidoProduto3.pedido = pedido1;
+    pedidoProduto3.produto = produtoSanduiche;
+    pedidoProduto3.quantidade = 1;
+    pedidoProduto3.tipoPonto = TipoPonto.AoPonto;
+    pedidoProduto3.ingredientes = [produtoIngredientePaoFrances, produtoIngredienteCebola];
 
     pedido1.produtos = [pedidoProduto1, pedidoProduto2, pedidoProduto3];
-    pedidos.push(pedido1, pedido1);
+    pedidos.push(pedido1);
 
     return pedidos;
   }
